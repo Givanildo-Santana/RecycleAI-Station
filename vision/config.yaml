@@ -1,0 +1,41 @@
+# ===============================================
+#  CONFIGURAÇÕES DO PROJETO RECYCLEAI-VISION
+# ===============================================
+
+project:
+  name: "RecycleAI-Vision"
+  base_path: "."        # Sempre relativo à pasta /vision
+
+paths:
+  dataset: "datasets/dataset_manual"               # Pasta do dataset
+  data_yaml: "datasets/dataset_manual/data.yaml"   # Caminho relativo ao data.yaml
+  models: "models"                                 # Onde os modelos treinados serão salvos
+  scripts: "scripts"                               # Scripts Python
+  yolov5: "yolov5"                                 # Pasta do YOLOv5
+  weights_pt: "models/manual/weights/best.pt"      # Pesos iniciais (caso use transfer learning)
+  weights_torchscript: "models/manual/best_ts.pt"  # Exportação para TorchScript
+
+training:
+  img_size: 640
+  batch: 2
+  epochs: 100
+  data_yaml: "datasets/dataset_manual/data.yaml"
+  pretrained_weights: "yolov5s.pt"
+  run_name: "reciclavel_from_scratch"
+
+realtime:
+  source: 0
+  conf_thres: 0.50
+  iou_thres: 0.45
+  device: "cpu"
+  show_fps: true
+
+  # 🔵 ROI (Região de Interesse)
+  roi_x_start: 100
+  roi_x_end: 480
+  roi_y_start: 70
+  roi_y_end: 450
+
+export:
+  opset: 12
+  simplify: true

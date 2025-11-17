@@ -1,0 +1,22 @@
+# IGNORAR APENAS O VENV
+venv/
+*/venv/
+.venv/
+*/.venv/
+
+# ARQUIVOS AUTOMÁTICOS DO PYTHON
+__pycache__/
+*.pyc
+
+# ARQUIVOS DE SISTEMA (Windows/Mac)
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# JUPYTER CHECKPOINTS
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDEs (não são essenciais, só settings locais)
+.vscode/
+.idea/

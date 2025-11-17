@@ -1,0 +1,7 @@
+train: ../datasets/dataset_manual/train/images
+val: ../datasets/dataset_manual/valid/images
+test: ../datasets/dataset_manual/test/images
+
+nc: 4
+names: ['metal', 'papel', 'plastico', 'vidro']
+

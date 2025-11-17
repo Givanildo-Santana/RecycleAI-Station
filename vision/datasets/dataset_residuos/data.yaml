@@ -1,0 +1,6 @@
+train: /workspace/TCC/yolov5_recycle_project/datasets/dataset_residuos/train/images
+val: /workspace/TCC/yolov5_recycle_project/datasets/dataset_residuos/valid/images
+test: /workspace/TCC/yolov5_recycle_project/datasets/dataset_residuos/test/images
+
+nc: 4
+names: ['glass', 'metal', 'paper', 'plastic']

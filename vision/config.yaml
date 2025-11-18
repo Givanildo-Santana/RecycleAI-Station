@@ -4,31 +4,31 @@
 
 project:
   name: "RecycleAI-Vision"
-  base_path: "."        # Sempre relativo à pasta /vision
+  base_path: "."   # Sempre relativo à pasta /vision
 
 paths:
-  dataset: "datasets/dataset_manual"               # Pasta do dataset
-  data_yaml: "datasets/dataset_manual/data.yaml"   # Caminho relativo ao data.yaml
-  models: "models"                                 # Onde os modelos treinados serão salvos
-  scripts: "scripts"                               # Scripts Python
-  yolov5: "yolov5"                                 # Pasta do YOLOv5
-  weights_pt: "models/manual/weights/best.pt"      # Pesos iniciais (caso use transfer learning)
-  weights_torchscript: "models/manual/best_ts.pt"  # Exportação para TorchScript
+  dataset: "datasets/dataset_manual"                 # Pasta do dataset
+  data_yaml: "datasets/dataset_manual/data.yaml"     # Caminho relativo ao data.yaml
+  models: "models"                                   # Onde os modelos treinados serão salvos
+  scripts: "scripts"                                 # Scripts Python
+  yolov5: "yolov5"                                   # Pasta do YOLOv5
+  weights_pt: "models/manual/weights/best.pt"        # Pesos .pt para treinar ou transfer learning
+  weights_torchscript: "models/manual/best_ts.pt"    # Modelo exportado em TorchScript para inferência
 
 training:
-  img_size: 640
-  batch: 2
-  epochs: 100
-  data_yaml: "datasets/dataset_manual/data.yaml"
-  pretrained_weights: "yolov5s.pt"
-  run_name: "reciclavel_from_scratch"
+  img_size: 640                                      # Tamanho de entrada do modelo
+  batch: 2                                           # Batch pequeno por causa do CPU
+  epochs: 100                                        # Número de épocas
+  data_yaml: "datasets/dataset_manual/data.yaml"     # Arquivo de configuração do dataset
+  pretrained_weights: "yolov5s.pt"                   # Pesos base da Ultralytics
+  run_name: "reciclavel_from_scratch"                # Nome da pasta de experimento
 
 realtime:
-  source: 0
-  conf_thres: 0.50
-  iou_thres: 0.45
-  device: "cpu"
-  show_fps: true
+  source: 0                                          # 0 = webcam nativa
+  conf_thres: 0.50                                   # Limite de confiança mínimo
+  iou_thres: 0.45                                    # IOU mínimo para supressão
+  device: "cpu"                                      # CPU ou "cuda"
+  show_fps: true                                     # Exibir FPS
 
   # 🔵 ROI (Região de Interesse)
   roi_x_start: 100
@@ -37,5 +37,13 @@ realtime:
   roi_y_end: 450
 
 export:
-  opset: 12
-  simplify: true
+  opset: 12                                          # ONNX opset / TorchScript export
+  simplify: true                                     # Simplificar modelo se suportado
+
+# ===============================================
+#  🔌 CONEXÃO COM O ARDUINO (Serial)
+# ===============================================
+
+arduino:
+  port: "COM5"                                       # Porta serial do Arduino no Windows
+  baudrate: 9600                                   # Taxa de comunicação

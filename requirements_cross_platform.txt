@@ -1,0 +1,57 @@
+# ============================
+#  RecicleAI – Cross Platform
+# ============================
+
+# CORE
+numpy
+pandas
+scipy
+pillow
+PyYAML
+requests
+tqdm
+python-dateutil
+pytz
+
+# VISUALIZAÇÃO
+matplotlib
+seaborn
+contourpy
+kiwisolver
+cycler
+fonttools
+pyparsing
+packaging
+
+# OPENCV
+opencv-python
+
+# GIT & UTILS
+GitPython
+gitdb
+filelock
+psutil
+idna
+urllib3
+charset-normalizer
+certifi
+
+# YOLO DEPENDENCIES
+sympy
+mpmath
+thop
+six
+smmap
+Jinja2
+MarkupSafe
+polars
+
+# ============================================
+#  TORCH – INSTALAR SEPARADO
+# ============================================
+
+# Windows (CPU)
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# Linux (CUDA 12.1)
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121

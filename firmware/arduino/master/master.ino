@@ -49,8 +49,8 @@ int statusA5 = 2;
 // ======================================================
 //           CONFIGURAÇÃO DA ESTEIRA - CORRIGIDO
 // ======================================================
-int pwmInicial = 30;
-int pwmFinal   = 120;
+int pwmInicial = 150;
+int pwmFinal   = 150;
 int passoPWM   = 5;
 int atrasoPWM  = 30;
 
@@ -250,6 +250,8 @@ void setup() {
 // ======================================================
 void loop() {
 
+ 
+
   verificarAtuador("A2", statusA2, A2C1, A2C2, CMD_A2R, CMD_A2P, statusA2);
   verificarAtuador("A3", statusA3, A3C1, A3C2, CMD_A3R, CMD_A3P, statusA3);
   verificarAtuador("A4", statusA4, A4C1, A4C2, CMD_A4R, CMD_A4P, statusA4);
@@ -275,7 +277,7 @@ void loop() {
         delay(30);
         Serial.println("Esteira Ligada");
         ligarEsteira();
-        delay(10000);
+        delay(4700);
         Serial.println("A2 parado na base. Avançando...");
         enviaComando(CMD_A2A);
         enviaComando(CMD_STATUS);
@@ -287,21 +289,29 @@ void loop() {
     else if (comando.equalsIgnoreCase("Papel")) {
       Serial.println("Esteira Ligada");
       ligarEsteira();
-      delay(11000);
+      delay(6260);
       Serial.println("Comando: PAPEL → Atuador A3");
       enviaComando(CMD_A3A);
-      delay(6000);
+      delay(0);
       desligarEsteira();
     }
 
     else if (comando.equalsIgnoreCase("Plastico")) {
-      Serial.println("Comando: PLÁSTICO → Atuador A4");
+     Serial.println("Esteira Ligada");
+      ligarEsteira();
+      delay(7900);
       enviaComando(CMD_A4A);
+      delay(0);
+      desligarEsteira();
     }
 
     else if (comando.equalsIgnoreCase("Metal")) {
-      Serial.println("Comando: METAL → Atuador A5");
+     Serial.println("Esteira Ligada");
+      ligarEsteira();
+      delay(9000);
       enviaComando(CMD_A5A);
+      delay(0);
+      desligarEsteira();
     }
 
     else if (comando.equalsIgnoreCase("Status")) {

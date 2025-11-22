@@ -76,10 +76,10 @@ class Atuador {
 };
 
 // Instâncias
-Atuador atuador2(L_EN[0], R_EN[0], LPWM[0], RPWM[0], 100);
+Atuador atuador2(L_EN[0], R_EN[0], LPWM[0], RPWM[0], 150);
 Atuador atuador3(L_EN[1], R_EN[1], LPWM[1], RPWM[1], 100);
-Atuador atuador4(L_EN[2], R_EN[2], LPWM[2], RPWM[2], 100);
-Atuador atuador5(L_EN[3], R_EN[3], LPWM[3], RPWM[3], 100);
+Atuador atuador4(L_EN[2], R_EN[2], LPWM[2], RPWM[2], 250);
+Atuador atuador5(L_EN[3], R_EN[3], LPWM[3], RPWM[3], 150);
 
 void atualizaStatus() {
   respostaStatus = "";

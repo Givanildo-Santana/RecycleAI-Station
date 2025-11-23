@@ -1,0 +1,235 @@
+Divisão de Tempo por Apresentador (20 minutos totais)
+✅ CLAYTON (Primeiro Apresentador)
+
+Tempo total: 7 minutos
+
+Apresentação inicial + título – 1 min
+
+Introdução – 2 min
+
+Objetivo do Projeto – 1 min
+
+Avaliação dos Modelos – 3 min
+
+✅ GIVANILDO (Segundo Apresentador)
+
+Tempo total: 7 minutos
+
+Vantagens do YOLOv5s – 1 min
+
+Metodologia (dataset + pré-processamento) – 2 min
+
+Metodologia (treinamento + inferência) – 2 min
+
+Hardware utilizado – 1 min
+
+Fluxos do Sistema – 1 min
+
+✅ LUIS FELIPE (Terceiro Apresentador)
+
+Tempo total: 6 minutos
+
+Resultados – 3 min
+
+Conclusão – 2 min
+
+Encerramento (“Obrigado”) – 1 min
+
+🟦 📌 Tempo Total Confirmado
+
+✔ Clayton — 7 min
+✔ Givanildo — 7 min
+✔ Luis Felipe — 6 min
+= 20 minutos exatos
+
+🎯 ROTEIRO DETALHADO COM TEMPO POR SLIDE
+⭐ CLAYTON — 7 minutos
+SLIDE 1: Título — 1 min
+
+– Cumprimenta a banca
+– Apresenta equipe e tema
+– Explica rapidamente o propósito geral do trabalho
+
+SLIDE 2: Introdução — 2 min
+
+– Dados sobre resíduos
+– Problema da triagem manual
+– Por que isso importa
+
+SLIDE 3: Objetivo do Projeto — 1 min
+
+– Problema real encontrado nas cooperativas
+– Objetivo: criar sistema acessível usando IA
+
+SLIDE 4: Avaliação dos Modelos — 3 min
+
+– Citar YOLOv5, SSD e Faster R-CNN
+– Explicar brevemente cada um
+– Justificar por que o YOLOv5s foi escolhido
+
+Clayton encerra e passa a fala para Givanildo
+
+⭐ GIVANILDO — 7 minutos
+SLIDE 5: Vantagens do YOLOv5s — 1 min
+
+– rapidez
+– baixo custo computacional
+– detecção das 4 classes
+– integração com Arduino
+
+SLIDE 6: Metodologia (Dataset + Pré-processamento) — 2 min
+
+– Dataset manual
+– Uso do Roboflow
+– Augmentations e preprocess
+
+SLIDE 7: Metodologia (Treinamento + Inferência) — 2 min
+
+– 100 épocas
+– pesos iniciais
+– fluxo webcam → YOLO → Arduino
+
+SLIDE 8: Hardware Utilizado — 1 min
+
+– Webcam
+– Notebook
+– 2 Arduinos
+– Drivers
+– Motores
+
+SLIDE 9: Fluxo do Sistema — 1 min
+
+– passo a passo do funcionamento
+– reforçar simplicidade e eficiência
+
+Givanildo entrega a fala a Luis Felipe
+
+⭐ LUIS FELIPE — 6 minutos
+SLIDE 10: Resultados — 3 min
+
+– mAP
+– Precisão
+– Recall
+– Melhor e pior classe
+– Inferência < 1s
+– Significado prático desses números
+
+SLIDE 11: Conclusão — 2 min
+
+– Reforçar baixo custo
+– Funciona bem em hardware simples
+– Benefício real às cooperativas
+– Contribuição ao ODS 12
+
+SLIDE 12: Obrigado — 1 min
+
+– agradece
+– abre para perguntas
+
+
+
+
+
+------------------------------------------------------------------
+
+
+
+ROTEIRO COMPLETO E CRONOMETRADO — PARA LER NA APRESENTAÇÃO
+🌟 APRESENTADOR 1 — CLAYTON
+
+Tempo total: ~7 minutos
+
+🔹 SLIDE 1 — Título (1 min)
+
+Clayton:
+"Boa tarde a todos. Nós somos o Clayton, o Givanildo e o Luis Felipe, alunos de Ciência da Computação. Hoje vamos apresentar nosso Trabalho de Conclusão de Curso, intitulado Desenvolvimento de Sistema de Triagem de Resíduos Utilizando Inteligência Artificial e Visão Computacional, orientado pelo professor Marco Gomes.
+Agradecemos a presença da banca e de todos que estão nos acompanhando."
+
+🔹 SLIDE 2 — Introdução (2 min)
+
+Clayton:
+"Para contextualizar o problema, o Brasil produz mais de 80 milhões de toneladas de resíduos por ano, mas menos de 9% é reciclado.
+Grande parte dessa triagem ainda é feita manualmente, em condições precárias, com baixa eficiência e alto esforço físico.
+Esse cenário nos motivou a buscar uma solução capaz de melhorar o processo de forma prática, acessível e com foco no baixo custo."
+
+🔹 SLIDE 3 — Objetivo do Projeto (1 min)
+
+Clayton:
+"O objetivo do nosso projeto é desenvolver um sistema automatizado de triagem de resíduos recicláveis, utilizando inteligência artificial e visão computacional, capaz de identificar quatro classes: papel, plástico, metal e vidro.
+A ideia surgiu a partir da observação de dificuldades reais enfrentadas por cooperativas de reciclagem, que não têm acesso a tecnologias sofisticadas ou caras."
+
+🔹 SLIDE 4 — Avaliação dos Modelos (3 min)
+
+Clayton:
+"Avaliamos três modelos de detecção de objetos: YOLOv5, SSD MobileNet e Faster R-CNN.
+Cada um deles possui características específicas. O SSD MobileNet, por exemplo, é mais leve, mas perde bastante em precisão. O Faster R-CNN é mais robusto, porém extremamente pesado para rodar em hardware simples.
+Após testes e medições, selecionamos o YOLOv5s, que se mostrou o melhor equilíbrio entre velocidade, precisão e baixo custo computacional.
+Essa escolha foi essencial para permitir que o sistema rodasse em hardware básico, como um notebook comum, e se integrasse ao Arduino sem dificuldades."
+
+Clayton encerra:
+"Agora passo a palavra ao Givanildo, que vai explicar a metodologia e o funcionamento completo do sistema."
+
+🌟 APRESENTADOR 2 — GIVANILDO
+
+Tempo total: ~7 minutos
+
+🔹 SLIDE 5 — Vantagens do YOLOv5s (1 min)
+
+Givanildo:
+"O YOLOv5s apresenta algumas vantagens que foram essenciais para o nosso projeto.
+Ele consegue detectar resíduos comuns das cooperativas com boa precisão, integra facilmente com Python e com o Arduino, e é leve o suficiente para rodar em hardware simples.
+Além disso, ele viabilizou a automação de baixo custo, melhorando a precisão e ajudando a reduzir o esforço manual."
+
+🔹 SLIDE 6 — Metodologia (Dataset + Pré-processamento) (2 min)
+
+Givanildo:
+"Para o dataset, capturamos nossas próprias imagens dos quatro tipos de resíduos. Depois, organizamos e anotamos tudo no Roboflow, o que facilitou o processo de padronização.
+No pré-processamento, realizamos redimensionamento para 640 por 640 pixels, normalização e técnicas de data augmentation, como rotação, alterações de brilho e espelhamento, para aumentar a diversidade dos dados."
+
+🔹 SLIDE 7 — Metodologia (Treinamento + Inferência) (2 min)
+
+Givanildo:
+"O treinamento foi feito em 100 épocas, utilizando os pesos iniciais do YOLOv5s e divisão 80/20 entre treino e validação.
+Depois do treinamento, configuramos o processo de inferência: a webcam captura o resíduo na esteira, o YOLOv5s faz a classificação em tempo real, e a classe detectada é enviada ao Arduino via comunicação Serial."
+
+🔹 SLIDE 8 — Hardware Utilizado (1 min)
+
+Givanildo:
+"Aqui temos o hardware utilizado no protótipo.
+Usamos uma webcam para captura, um notebook que executa o YOLOv5s, duas placas Arduino UNO — uma para controle principal e outra auxiliar —, cinco drivers BTS7960, cinco motores DC responsáveis pelos atuadores, além da estrutura mecânica da esteira e fontes de 12 e 24 volts."
+
+🔹 SLIDE 9 — Fluxo do Sistema (1 min)
+
+Givanildo:
+"O fluxo do sistema funciona assim: a webcam captura o resíduo na esteira. O modelo YOLOv5s analisa a imagem e classifica o material. O Python envia essa classe ao Arduino, que aciona os motores através da Ponte H, direcionando o resíduo automaticamente para o compartimento correto."
+
+Givanildo encerra:
+"Agora passo a palavra ao Luis Felipe, que irá apresentar os resultados e a conclusão geral do trabalho."
+
+🌟 APRESENTADOR 3 — LUIS FELIPE
+
+Tempo total: ~6 minutos
+
+🔹 SLIDE 10 — Resultados (3 min)
+
+Luis Felipe:
+"Nos resultados, alcançamos uma acurácia média de aproximadamente 90% no mAP@0.5 e cerca de 78% no mAP@0.5:0.95.
+A precisão ficou em torno de 95% e o recall em 90%, mostrando que o modelo raramente erra e identifica a maioria dos objetos corretamente.
+A classe que obteve melhor desempenho foi o plástico. Já metal e vidro apresentaram maiores dificuldades, principalmente por causa de reflexos e transparência.
+O tempo de inferência ficou abaixo de 1 segundo, demonstrando que o modelo é rápido o suficiente para operar em tempo real."
+
+🔹 SLIDE 11 — Conclusão (2 min)
+
+Luis Felipe:
+"Com esses resultados, concluímos que é totalmente possível automatizar a triagem de resíduos com baixo custo e utilizando hardware simples.
+O sistema demonstrou boa velocidade e precisão, e pode ajudar cooperativas a melhorar a eficiência e a segurança do processo de triagem.
+Além disso, o projeto contribui para o ODS 12, relacionado ao consumo e produção responsáveis."
+
+🔹 SLIDE 12 — Encerramento (1 min)
+
+Luis Felipe:
+"Gostaríamos de agradecer a atenção de todos e nos colocamos à disposição da banca para perguntas. Obrigado."
+
+
+
+--------------------------------------------------------------------------
